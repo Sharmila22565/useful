@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Local Commerce Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="login">
+    <div class="container" style="padding-top: 3rem; max-width: 540px;">
+      <div class="section-card">
+        <h2>Welcome back</h2>
+        <p>Log in to continue to the marketplace dashboard.</p>
+        <form id="loginForm" class="form-grid" style="margin-top: 1rem;">
+          <label class="full">
+            Full name
+            <input id="fullName" placeholder="Asha Kumar" required />
+          </label>
+          <label class="full">
+            Email
+            <input id="email" type="email" placeholder="asha@example.com" required />
+          </label>
+          <label class="full">
+            Password
+            <input type="password" placeholder="••••••••" required />
+          </label>
+          <label class="full">
+            Location mode
+            <select id="locationMode">
+              <option value="manual">Manual entry</option>
+              <option value="gps">Use Auto GPS</option>
+            </select>
+          </label>
+          <label class="full">
+            Location
+            <input id="location" placeholder="Enter your location or use GPS" required />
+          </label>
+          <div class="btn-row full">
+            <button class="btn btn-secondary" type="button" id="gpsBtn">Start live GPS tracking</button>
+          </div>
+          <div class="full notice" id="fingerprintStatus">Fingerprint verification pending.</div>
+          <div class="btn-row full">
+            <button class="btn btn-secondary" type="button" id="fingerprintBtn">Verify fingerprint</button>
+            <button class="btn btn-primary" type="submit" id="loginBtn" disabled>Log in</button>
+            <a class="btn btn-secondary" href="index.html">Back home</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

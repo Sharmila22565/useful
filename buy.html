@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy | Local Commerce Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="buy">
+    <div class="container">
+      <header class="hero">
+        <nav class="navbar">
+          <a class="brand" href="index.html">Local Commerce Hub</a>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="sell.html">Sell</a>
+            <a href="choose.html">Back</a>
+          </div>
+        </nav>
+      </header>
+
+      <section class="section-card">
+        <h2>Discover listings from local sellers</h2>
+        <p>Browse five sample products and purchase what you want. Once sold, listings disappear from the public feed.</p>
+        <div class="filter-bar" style="margin-top: 1rem;">
+          <input id="searchInput" placeholder="Search by name or description" />
+          <select id="categorySelect">
+            <option value="All">All categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Vehicles">Vehicles</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home">Home</option>
+          </select>
+          <select id="priceSelect">
+            <option value="0">Any price</option>
+            <option value="100">Under ₹100</option>
+            <option value="200">Under ₹200</option>
+            <option value="1000">Under ₹1000</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

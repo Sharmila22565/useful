@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    color:white;
+    text-align:center;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#6a11cb);
+    background-size:400% 400%;
+    animation:bg 12s ease infinite;
+    transition:0.5s;
+}
+
+@keyframes bg{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero h2{
+    color:#ffd369;
+    margin:20px;
+}
+
+.hero p{
+    width:60%;
+    margin-bottom:30px;
+}
+
+.btn{
+    text-decoration:none;
+    background:white;
+    color:black;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.card{
+    width:80%;
+    margin:50px auto;
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.1);
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    margin-bottom:20px;
+}
+
+.progress{
+    width:100%;
+    background:#444;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.bar{
+    padding:10px;
+    border-radius:20px;
+    text-align:right;
+}
+
+.java{
+    width:85%;
+    background:#ff9800;
+}
+
+.html{
+    width:90%;
+    background:#ff5722;
+}
+
+.css{
+    width:85%;
+    background:#03a9f4;
+}
+
+.js{
+    width:65%;
+    background:#ffeb3b;
+    color:black;
+}
+
+.project-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.project{
+    width:250px;
+    padding:20px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.15);
+    transition:0.4s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+}
+
+input,textarea{
+    width:80%;
+    padding:15px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.dark-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    font-size:20px;
+}
+
+.dark{
+    background:black;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        width:90%;
+    }
+
+    .project-container{
+        flex-direction:column;
+        align-items:center;
+    }
+}

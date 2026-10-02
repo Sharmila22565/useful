@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose your path</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="choose">
+    <div class="container" style="padding-top: 3rem; max-width: 760px;">
+      <div class="section-card">
+        <h2>Welcome, <span id="currentUser">friend</span></h2>
+        <p>Choose how you want to start your trading experience.</p>
+        <div class="card-grid" style="margin-top: 1rem;">
+          <article class="card">
+            <h3>Buy products</h3>
+            <p>Explore the feed, compare prices, and place your order.</p>
+            <a class="btn btn-primary" href="buy.html">Open buy page</a>
+          </article>
+          <article class="card">
+            <h3>Sell products</h3>
+            <p>Publish your product, capture photos, and share your current location.</p>
+            <a class="btn btn-primary" href="sell.html">Open sell page</a>
+          </article>
+          <article class="card">
+            <h3>Home dashboard</h3>
+            <p>Manage history, orders, cart, settings, and support in one place.</p>
+            <a class="btn btn-secondary" href="home.html">Open home</a>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

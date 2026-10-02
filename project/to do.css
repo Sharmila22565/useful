@@ -1,0 +1,22 @@
+body{
+   
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+button{
+    color:black;
+    background-color: bisque;
+    border:1px solid black;
+    border-radius: 20px;
+    padding: 10px 30px;
+    display: flex;
+}
+button:hover{
+    background-color: blue;
+}
+input{
+    border: 1px;
+    border-radius: 30px solid black;
+    padding: 20px 50px;
+}

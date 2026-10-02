@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell | Local Commerce Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="sell">
+    <div class="container">
+      <header class="hero">
+        <nav class="navbar">
+          <a class="brand" href="index.html">Local Commerce Hub</a>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="buy.html">Buy</a>
+            <a href="choose.html">Back</a>
+          </div>
+        </nav>
+      </header>
+
+      <section class="section-card">
+        <h2>List a product for sale</h2>
+        <p>Upload at least four photos from the live camera, and the demo will guide you through AI consistency checks and location capture.</p>
+        <form id="sellForm" class="form-grid" style="margin-top: 1rem;">
+          <label>
+            Item name
+            <input id="itemName" required />
+          </label>
+          <label>
+            Category
+            <select id="category">
+              <option value="Electronics">Electronics</option>
+              <option value="Vehicles">Vehicles</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Home">Home</option>
+              <option value="General">General</option>
+            </select>
+          </label>
+          <label class="full">
+            Description
+            <textarea id="description" required></textarea>
+          </label>
+          <label>
+            Selling price (₹)
+            <input id="price" type="number" min="1" required />
+          </label>
+          <label>
+            Seller location
+            <input id="location" placeholder="Use GPS or enter manually" required />
+          </label>
+          <div class="full">
+            <button class="btn btn-secondary" type="button" id="gpsFillBtn">Auto-fill with GPS</button>
+          </div>
+          <label class="full">
+            Upload 4 photos from live camera or files
+            <input id="photoUpload" type="file" accept="image/*" multiple required />
+          </label>
+          <div class="full">
+            <video id="cameraStream" autoplay playsinline muted style="width: 100%; max-height: 280px; border-radius: 1rem; background: #000; object-fit: cover;"></video>
+            <div class="btn-row" style="margin-top: 0.7rem;">
+              <button class="btn btn-secondary" type="button" id="openCameraBtn">Open live camera</button>
+              <button class="btn btn-primary" type="button" id="capturePhotoBtn">Capture photo</button>
+            </div>
+          </div>
+          <div class="full notice" id="aiStatus">AI check pending. Add photos to analyze the product.</div>
+          <div class="full preview-grid" id="previewGrid"></div>
+          <div class="btn-row full">
+            <button class="btn btn-primary" type="submit">Publish listing</button>
+            <button class="btn btn-secondary" type="button" onclick="window.location.href='home.html'">Go to dashboard</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
